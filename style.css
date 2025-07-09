@@ -1,80 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-*{
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
-.main{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(images/back.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.profile-card{
+
+/* Body Background */
+body {
+  background: linear-gradient(to bottom right, #ff6ec4, #7873f5);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
-  width: 100%;
-  border-radius: 25px;
+  padding: 20px;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  background: #fff;
   padding: 30px;
-  border: 1px solid #ffffff40;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
-.image{
-  position: relative;
-  height: 150px;
-  width: 150px;
-}
-.image .profile-pic{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
-.data{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
-}
-.data h2{
-  font-size: 33px;
-  font-weight: 600;
-}
-span{
-  font-size: 18px;
-}
-.row{
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-.row .info{
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   text-align: center;
-  padding: 0 20px;
+  width: 300px;
+  margin-bottom: 40px;
 }
-.buttons{
+
+.image {
+  margin-bottom: 15px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.data h2 {
+  margin-bottom: 5px;
+}
+
+.row {
   display: flex;
-  align-items: center;
-  margin-top: 30px;
+  justify-content: space-between;
+  margin: 20px 0;
 }
-.buttons .btn{
+
+.info {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background: #ff6ec4;
   color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
   text-decoration: none;
-  margin: 0 20px;
-  padding: 8px 25px;
-  border-radius: 25px;
-  font-size: 18px;
-  white-space: nowrap;
-  background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%);
+  transition: 0.3s;
 }
-.buttons .btn:hover{
-  box-shadow: inset 0 5px 20px rgba(0,0,0,0.4);
+
+.btn:hover {
+  background: #e85bb5;
+}
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.card-item {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 10px;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.badge-editor { background: #ff6ec4; }
+.badge-gamer { background: #6ecfff; }
+.badge-designer { background: #ffb86c; }
+.badge-marketer { background: #32d296; }
+
+.card-title {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.card-button {
+  background: #7873f5;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-button:hover {
+  background: #5c59d4;
 }
